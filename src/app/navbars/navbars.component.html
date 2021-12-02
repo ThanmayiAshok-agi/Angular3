@@ -1,0 +1,17 @@
+<p><button type="submit" >Try it for 7 days then $20/month</button></p>
+<form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()"><fieldset>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="first name">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="last name">
+
+        <label for="email">Email Address</label>
+        <input type="text" id="email" formControlName="email" placeholder="email address" required>
+    
+    <label for="password">Password</label>
+    <input type="text" id="password" name="password" placeholder="password">
+    <button type="submit">Claim your trial</button>
+    <h5>By clicking the button you are agreeing to our terms and conditions</h5>
+</fieldset>
+  </form> 

@@ -1,0 +1,19 @@
+<form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname" [(ngModel)]="fname" required minlength="3">
+  <br>
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lname" [(ngModel)]="lname">
+  <br>
+  <label for="age">Age</label>
+  <input type="text" id="age" name="age" [(ngModel)]="age">
+  <br>
+  <input type="checkbox" name="terms" id="terms" [(ngModel)]="terms" required> I accept the terms & conditions
+  <br>
+  <button type="submit" [disabled]="!myForm.valid">Submit</button>
+  <br>
+  <button (click)="resetForm(myForm)">Reset</button>
+</form>
+
+<app-navbars></app-navbars>
+
